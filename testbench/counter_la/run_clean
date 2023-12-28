@@ -1,0 +1,6 @@
+rm -rf ./gdb.debug ./gdbwave.debug
+rm -f *.vcd *.hex
+
+rm -rf xsim.dir/ *.log *.pb *.jou *.wdb
+rm -f *.vcd *.hex
+rm -f *.i *.o *.s *.out *.map

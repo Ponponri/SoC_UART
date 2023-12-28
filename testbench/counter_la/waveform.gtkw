@@ -1,0 +1,148 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Tue Sep 19 07:26:27 2023
+[*]
+[dumpfile] "/mnt/hgfs/shared_folder/SoCLab-ExtraLab/testbench/counter_la/counter_la.vcd"
+[dumpfile_mtime] "Tue Sep 19 06:48:34 2023"
+[dumpfile_size] 24538902
+[savefile] "/mnt/hgfs/shared_folder/SoCLab-ExtraLab/testbench/counter_la/waveform.gtkw"
+[timestart] 0
+[size] 1075 907
+[pos] 1923 970
+*-28.769600 97200000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] counter_la_tb.
+[treeopen] counter_la_tb.uut.
+[treeopen] counter_la_tb.uut.mprj.
+[treeopen] counter_la_tb.uut.mprj.mprj.
+[sst_width] 214
+[signals_width] 262
+[sst_expanded] 1
+[sst_vpaned_height] 526
+-mprj
+@28
+counter_la_tb.uut.mprj.mprj.clk
+counter_la_tb.uut.mprj.mprj.decoded
+@22
+counter_la_tb.uut.mprj.mprj.delayed_count[15:0]
+counter_la_tb.uut.mprj.mprj.rdata[31:0]
+@28
+counter_la_tb.uut.mprj.mprj.ready
+counter_la_tb.uut.mprj.mprj.valid
+counter_la_tb.uut.mprj.mprj.wbs_ack_o
+counter_la_tb.uut.mprj.mprj.wbs_we_i
+counter_la_tb.uut.mprj.mprj.wbs_cyc_i
+counter_la_tb.uut.mprj.mprj.wbs_stb_i
+@22
+counter_la_tb.uut.mprj.mprj.wbs_adr_i[31:0]
+counter_la_tb.uut.mprj.mprj.wbs_dat_i[31:0]
+counter_la_tb.uut.mprj.mprj.wbs_dat_o[31:0]
+@200
+-
+-acc
+@22
+counter_la_tb.uut.mprj.DMA_inst.acc_data_i[31:0]
+counter_la_tb.uut.mprj.DMA_inst.acc_data_valid_i
+-dma-signal
+@22
+counter_la_tb.uut.mprj.mprj.dma_wbs_cyc_i
+counter_la_tb.uut.mprj.mprj.dma_wbs_we_i
+counter_la_tb.uut.mprj.mprj.dma_wbs_stb_i
+counter_la_tb.uut.mprj.mprj.dma_wbs_adr_i[31:0]
+counter_la_tb.uut.mprj.mprj.dma_brust_valid
+-
+-user_sdram_controller
+@22
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.Mapped_BA[1:0]
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.Mapped_CA[7:0]
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.Mapped_RA[12:0]
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.sample
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.pref_buf_0[31:0]
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.pref_buf_1[31:0]
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.pref_buf_2[31:0]
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.pref_buf_3[31:0]
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.clk
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.addr_q[22:0]
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.offset[22:0]
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.prefetch_flag
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.prefetch_timer[1:0]
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.prefetch_length[1:0]
+- brust-related
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.state_q[4:0]
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.brust_en
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.brust_valid
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.brust_flag
+counter_la_tb.uut.mprj.mprj.user_sdram_controller.brust_timer[1:0]
+-
+-User Bram
+@28
+counter_la_tb.uut.mprj.mprj.user_bram.Clk
+@22
+counter_la_tb.uut.mprj.mprj.user_bram.Error
+@200
+-User Bram Bank0
+@28
+counter_la_tb.uut.mprj.mprj.user_bram.Bank0.clk
+@22
+counter_la_tb.uut.mprj.mprj.user_bram.Bank0.d[31:0]
+counter_la_tb.uut.mprj.mprj.user_bram.Bank0.q[31:0]
+@22
+counter_la_tb.uut.mprj.mprj.user_bram.Bank0.raddr[9:0]
+@28
+counter_la_tb.uut.mprj.mprj.user_bram.Bank0.re
+#@22
+#counter_la_tb.uut.mprj.mprj.user_bram.Bank0.waddr[9:0]
+#@28
+#counter_la_tb.uut.mprj.mprj.user_bram.Bank0.we
+@200
+-
+-User Bram Bank1
+@28
+counter_la_tb.uut.mprj.mprj.user_bram.Bank1.clk
+@22
+counter_la_tb.uut.mprj.mprj.user_bram.Bank1.d[31:0]
+counter_la_tb.uut.mprj.mprj.user_bram.Bank1.q[31:0]
+@22
+counter_la_tb.uut.mprj.mprj.user_bram.Bank1.raddr[9:0]
+@28
+counter_la_tb.uut.mprj.mprj.user_bram.Bank1.re
+#@22
+#counter_la_tb.uut.mprj.mprj.user_bram.Bank1.waddr[9:0]
+#@28
+#counter_la_tb.uut.mprj.mprj.user_bram.Bank1.we
+@200
+-
+-User Bram Bank2
+@28
+counter_la_tb.uut.mprj.mprj.user_bram.Bank2.clk
+@22
+counter_la_tb.uut.mprj.mprj.user_bram.Bank2.d[31:0]
+counter_la_tb.uut.mprj.mprj.user_bram.Bank2.q[31:0]
+@22
+counter_la_tb.uut.mprj.mprj.user_bram.Bank2.raddr[9:0]
+@28
+counter_la_tb.uut.mprj.mprj.user_bram.Bank2.re
+#@22
+#counter_la_tb.uut.mprj.mprj.user_bram.Bank2.waddr[9:0]
+#@28
+#counter_la_tb.uut.mprj.mprj.user_bram.Bank2.we
+@200
+-
+-User Bram Bank3
+@28
+counter_la_tb.uut.mprj.mprj.user_bram.Bank3.clk
+@22
+counter_la_tb.uut.mprj.mprj.user_bram.Bank3.d[31:0]
+counter_la_tb.uut.mprj.mprj.user_bram.Bank3.q[31:0]
+@22
+counter_la_tb.uut.mprj.mprj.user_bram.Bank3.raddr[9:0]
+@28
+counter_la_tb.uut.mprj.mprj.user_bram.Bank3.re
+#@22
+#counter_la_tb.uut.mprj.mprj.user_bram.Bank3.waddr[9:0]
+#@28
+#counter_la_tb.uut.mprj.mprj.user_bram.Bank3.we
+@200
+-
+-
+[pattern_trace] 1
+[pattern_trace] 0
