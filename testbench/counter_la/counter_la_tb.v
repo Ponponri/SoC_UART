@@ -143,6 +143,8 @@ module counter_la_tb;
 
 	// assign mprj_io[3] = 1'b1;
 
+	
+
 	initial begin
 		$dumpfile("counter_la.vcd");
 		$dumpvars(0, counter_la_tb);
@@ -196,24 +198,71 @@ module counter_la_tb;
 		$display("LA Test 1 started");
 
 		$display("\nUART Test started");
-		tb_send_data_2;
+		fork
+			begin
+				send_data_1;
+				// wait(checkbits == 16'hAB61); 
+				send_data_2;
+				send_data_1;
+				send_data_2;
+				send_data_1;
+				send_data_2;
+				send_data_1;
+				send_data_2;
+			end
+
+			begin
+				wait(checkbits == 16'h003E);
+				$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
+				wait(checkbits == 16'h0044);
+				$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
+				wait(checkbits == 16'h004A);
+				$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
+				wait(checkbits == 16'h0050);
+				$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);		
+				wait(checkbits == 16'hAB61); 
+			end
+		join
+		
+		// wait(mprj_isr_ack);
+		
 		// wait(mprj_isr_ack);
 		// $display("UART receive passed");
 
-		wait(checkbits == 16'h003E);
-		$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
-		wait(checkbits == 16'h0044);
-		$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
-		wait(checkbits == 16'h004A);
-		$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);
-		wait(checkbits == 16'h0050);
-		$display("Call function matmul() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x%x", checkbits);		
-		wait(checkbits == 16'hAB61); 
-		$display("LA Test 2 passed");
+		wait(0);
 
 		#10000;
 		$finish;
 	end
+
+
+	task send_data_1;begin
+		@(posedge clock);
+		tx_start = 1;
+		tx_data = 15;
+		
+		#50;
+		wait(tx_busy);
+		wait(!tx_busy);
+		tx_start = 0;
+		$display("tx complete 1");
+		#50;
+		
+	end endtask
+
+	task send_data_2;begin
+		@(posedge clock);
+		tx_start = 1;
+		tx_data = 61;
+		
+		#50;
+		wait(tx_busy);
+		wait(!tx_busy);
+		tx_start = 0;
+		$display("tx complete 2");
+		#50;
+		
+	end endtask
 
 	task tb_send_data_1;begin
 		@(posedge clock);
@@ -230,22 +279,13 @@ module counter_la_tb;
 				wait(!tx_busy);
 				tx_start = 0;
 				$display("tx complete 1");
+				#50;
 			end
 		join
 		
 	end endtask
 
-	task send_data_2;begin
-		@(posedge clock);
-		tx_start = 1;
-		tx_data = 61;
-		
-		#50;
-		wait(!tx_busy);
-		tx_start = 0;
-		$display("tx complete 1");
-		
-	end endtask
+	
 
 	task tb_send_data_2;begin
 		@(posedge clock);
@@ -261,7 +301,8 @@ module counter_la_tb;
 				#50;
 				wait(!tx_busy);
 				tx_start = 0;
-				$display("tx complete 1");
+				$display("tx complete 2");
+				#50;
 			end
 		join
 		

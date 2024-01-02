@@ -42,12 +42,17 @@ char __attribute__ ( ( section ( ".mprj" ) ) ) uart_read_char()
 int __attribute__ ( ( section ( ".mprj" ) ) ) uart_read()
 {
     int num;
-    if((((reg_uart_stat>>5) | 0) == 0) && (((reg_uart_stat>>4) | 0) == 0)){
-        for(int i = 0; i < 1; i++)
-            asm volatile ("nop");
+    // if((((reg_uart_stat>>5) | 0) == 0) && (((reg_uart_stat>>4) | 0) == 0)){
+    //     for(int i = 0; i < 1; i++)
+    //         asm volatile ("nop");
 
-        num = reg_rx_data;
-    }
+    //     num = reg_rx_data;
+    // }
+    
+    // while(!( (((reg_uart_stat>>5) | 0) == 0) && (((reg_uart_stat>>4) | 0) == 0)) );
+    for(int i = 0; i < 1; i++)
+        asm volatile ("nop");
+    num = reg_rx_data;
 
     return num;
 }

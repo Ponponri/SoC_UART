@@ -6,7 +6,7 @@
 	.text
 .Ltext0:
 	.cfi_sections	.debug_frame
-	.file 0 "/home/ponponri/Desktop/shared_folder/SoCLab-ExtraLab_1226_uart/SoCLab-ExtraLab/testbench/counter_la" "counter_la.c"
+	.file 0 "/mnt/hgfs/shared_folder/SOC_Final_UART_FIFO/SoCLab-ExtraLab/testbench/counter_la" "counter_la.c"
 	.align	2
 	.globl	putchar
 	.type	putchar, @function
@@ -362,10 +362,66 @@ main:
 	slli	a5,a5,16
 	.loc 2 194 36
 	sw	a5,12(s0)
+	.loc 2 196 2 is_stmt 1
+	.loc 2 196 8 is_stmt 0
+	call	matmul
+.LVL16:
+	.loc 2 197 2 is_stmt 1
+	.loc 2 197 43 is_stmt 0
+	lw	a5,0(a0)
+	slli	a5,a5,16
+	.loc 2 197 36
+	sw	a5,12(s0)
 	.loc 2 198 2 is_stmt 1
-	.loc 2 198 36 is_stmt 0
+	.loc 2 198 47 is_stmt 0
+	lw	a5,4(a0)
+	slli	a5,a5,16
+	.loc 2 198 36
+	sw	a5,12(s0)
+	.loc 2 199 2 is_stmt 1
+	.loc 2 199 47 is_stmt 0
+	lw	a5,8(a0)
+	slli	a5,a5,16
+	.loc 2 199 36
+	sw	a5,12(s0)
+	.loc 2 200 2 is_stmt 1
+	.loc 2 200 47 is_stmt 0
+	lw	a5,12(a0)
+	slli	a5,a5,16
+	.loc 2 200 36
+	sw	a5,12(s0)
+	.loc 2 202 2 is_stmt 1
+	.loc 2 202 8 is_stmt 0
+	call	matmul
+.LVL17:
+	.loc 2 203 2 is_stmt 1
+	.loc 2 203 43 is_stmt 0
+	lw	a5,0(a0)
+	slli	a5,a5,16
+	.loc 2 203 36
+	sw	a5,12(s0)
+	.loc 2 204 2 is_stmt 1
+	.loc 2 204 47 is_stmt 0
+	lw	a5,4(a0)
+	slli	a5,a5,16
+	.loc 2 204 36
+	sw	a5,12(s0)
+	.loc 2 205 2 is_stmt 1
+	.loc 2 205 47 is_stmt 0
+	lw	a5,8(a0)
+	slli	a5,a5,16
+	.loc 2 205 36
+	sw	a5,12(s0)
+	.loc 2 206 2 is_stmt 1
+	.loc 2 206 47 is_stmt 0
+	lw	a5,12(a0)
+	slli	a5,a5,16
+	.loc 2 206 36
+	sw	a5,12(s0)
+	.loc 2 208 2 is_stmt 1
+	.loc 2 208 36 is_stmt 0
 	sw	s1,12(s0)
-	.loc 2 199 1
+	.loc 2 210 1
 	lw	ra,12(sp)
 	.cfi_restore 1
 	lw	s0,8(sp)
@@ -382,7 +438,7 @@ main:
 	.file 6 "/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include/stdint-gcc.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x21a
+	.4byte	0x22e
 	.2byte	0x5
 	.byte	0x1
 	.byte	0x4
@@ -450,7 +506,7 @@ main:
 	.4byte	0x8a
 	.byte	0xd
 	.byte	0
-	.byte	0x4
+	.byte	0x5
 	.4byte	0x6a
 	.byte	0xe
 	.4byte	.LASF20
@@ -461,7 +517,7 @@ main:
 	.4byte	.LFE323-.LFB323
 	.byte	0x1
 	.byte	0x9c
-	.4byte	0x144
+	.4byte	0x158
 	.byte	0xf
 	.4byte	.LASF11
 	.byte	0x2
@@ -475,56 +531,61 @@ main:
 	.byte	0xbe
 	.byte	0x7
 	.4byte	0x8a
-	.byte	0x1
-	.byte	0x5a
-	.byte	0x3
-	.4byte	0x15e
+	.4byte	.LLST3
+	.byte	0x4
+	.4byte	0x172
 	.4byte	.LBB12
 	.4byte	.LBE12-.LBB12
 	.byte	0xb5
 	.byte	0xa
-	.4byte	0xdc
+	.4byte	0xde
 	.byte	0x11
-	.4byte	0x16f
+	.4byte	0x183
 	.byte	0
-	.byte	0x3
-	.4byte	0x144
+	.byte	0x4
+	.4byte	0x158
 	.4byte	.LBB14
 	.4byte	.LBE14-.LBB14
 	.byte	0xb7
 	.byte	0x3
-	.4byte	0xf9
+	.4byte	0xfb
 	.byte	0x2
-	.4byte	0x151
-	.4byte	.LLST3
+	.4byte	0x165
+	.4byte	.LLST4
 	.byte	0
-	.byte	0x3
-	.4byte	0x1e9
+	.byte	0x4
+	.4byte	0x1fd
 	.4byte	.LBB16
 	.4byte	.LBE16-.LBB16
 	.byte	0xb9
 	.byte	0x3
-	.4byte	0x13a
+	.4byte	0x13c
 	.byte	0x2
-	.4byte	0x1f7
-	.4byte	.LLST4
+	.4byte	0x20b
+	.4byte	.LLST5
 	.byte	0x12
-	.4byte	0x203
+	.4byte	0x217
 	.4byte	.LBB17
 	.4byte	.LBE17-.LBB17
 	.byte	0x4
 	.2byte	0x326
 	.byte	0x2
 	.byte	0x2
-	.4byte	0x214
-	.4byte	.LLST5
+	.4byte	0x228
+	.4byte	.LLST6
 	.byte	0x2
-	.4byte	0x20c
-	.4byte	.LLST4
+	.4byte	0x220
+	.4byte	.LLST5
 	.byte	0
 	.byte	0
-	.byte	0x5
+	.byte	0x3
 	.4byte	.LVL15
+	.4byte	0x78
+	.byte	0x3
+	.4byte	.LVL16
+	.4byte	0x78
+	.byte	0x3
+	.4byte	.LVL17
 	.4byte	0x78
 	.byte	0
 	.byte	0x13
@@ -533,7 +594,7 @@ main:
 	.byte	0x1d
 	.byte	0x14
 	.byte	0x3
-	.4byte	0x15e
+	.4byte	0x172
 	.byte	0x14
 	.4byte	.LASF11
 	.byte	0x3
@@ -548,7 +609,7 @@ main:
 	.byte	0x1c
 	.4byte	0x71
 	.byte	0x3
-	.4byte	0x17c
+	.4byte	0x190
 	.byte	0x16
 	.4byte	.LASF11
 	.byte	0x3
@@ -563,25 +624,25 @@ main:
 	.4byte	.LFE317-.LFB317
 	.byte	0x1
 	.byte	0x9c
-	.4byte	0x1a7
+	.4byte	0x1bb
 	.byte	0x7
 	.string	"p"
 	.byte	0x1a
 	.byte	0x18
-	.4byte	0x1a7
+	.4byte	0x1bb
 	.4byte	.LLST1
-	.byte	0x5
+	.byte	0x3
 	.4byte	.LVL8
-	.4byte	0x1b8
+	.4byte	0x1cc
 	.byte	0
-	.byte	0x4
-	.4byte	0x1b3
+	.byte	0x5
+	.4byte	0x1c7
 	.byte	0x1
 	.byte	0x1
 	.byte	0x8
 	.4byte	.LASF12
 	.byte	0x17
-	.4byte	0x1ac
+	.4byte	0x1c0
 	.byte	0x6
 	.4byte	.LASF14
 	.byte	0x12
@@ -589,16 +650,16 @@ main:
 	.4byte	.LFE316-.LFB316
 	.byte	0x1
 	.byte	0x9c
-	.4byte	0x1e9
+	.4byte	0x1fd
 	.byte	0x7
 	.string	"c"
 	.byte	0x12
 	.byte	0x13
-	.4byte	0x1ac
+	.4byte	0x1c0
 	.4byte	.LLST0
 	.byte	0x18
 	.4byte	.LVL4
-	.4byte	0x1b8
+	.4byte	0x1cc
 	.byte	0x19
 	.byte	0x1
 	.byte	0x5a
@@ -612,7 +673,7 @@ main:
 	.2byte	0x325
 	.byte	0x14
 	.byte	0x3
-	.4byte	0x203
+	.4byte	0x217
 	.byte	0x1b
 	.string	"v"
 	.byte	0x4
@@ -659,6 +720,15 @@ main:
 	.byte	0
 	.byte	0
 	.byte	0x3
+	.byte	0x48
+	.byte	0
+	.byte	0x7d
+	.byte	0x1
+	.byte	0x7f
+	.byte	0x13
+	.byte	0
+	.byte	0
+	.byte	0x4
 	.byte	0x1d
 	.byte	0x1
 	.byte	0x31
@@ -678,22 +748,13 @@ main:
 	.byte	0x13
 	.byte	0
 	.byte	0
-	.byte	0x4
+	.byte	0x5
 	.byte	0xf
 	.byte	0
 	.byte	0xb
 	.byte	0x21
 	.byte	0x4
 	.byte	0x49
-	.byte	0x13
-	.byte	0
-	.byte	0
-	.byte	0x5
-	.byte	0x48
-	.byte	0
-	.byte	0x7d
-	.byte	0x1
-	.byte	0x7f
 	.byte	0x13
 	.byte	0
 	.byte	0
@@ -888,7 +949,7 @@ main:
 	.byte	0x49
 	.byte	0x13
 	.byte	0x2
-	.byte	0x18
+	.byte	0x17
 	.byte	0
 	.byte	0
 	.byte	0x11
@@ -1088,6 +1149,23 @@ main:
 	.byte	0
 .LLST3:
 	.byte	0x7
+	.4byte	.LVL15
+	.4byte	.LVL16-1
+	.byte	0x1
+	.byte	0x5a
+	.byte	0x7
+	.4byte	.LVL16
+	.4byte	.LVL17-1
+	.byte	0x1
+	.byte	0x5a
+	.byte	0x7
+	.4byte	.LVL17
+	.4byte	.LFE323
+	.byte	0x1
+	.byte	0x5a
+	.byte	0
+.LLST4:
+	.byte	0x7
 	.4byte	.LVL10
 	.4byte	.LVL11
 	.byte	0x5
@@ -1102,7 +1180,7 @@ main:
 	.byte	0x1
 	.byte	0x5f
 	.byte	0
-.LLST4:
+.LLST5:
 	.byte	0x7
 	.4byte	.LVL12
 	.4byte	.LVL14
@@ -1110,7 +1188,7 @@ main:
 	.byte	0x31
 	.byte	0x9f
 	.byte	0
-.LLST5:
+.LLST6:
 	.byte	0x7
 	.4byte	.LVL12
 	.4byte	.LVL14
@@ -1218,8 +1296,8 @@ main:
 .LASF2:
 	.string	"signed char"
 	.section	.debug_line_str,"MS",@progbits,1
-.LASF1:
-	.string	"/home/ponponri/Desktop/shared_folder/SoCLab-ExtraLab_1226_uart/SoCLab-ExtraLab/testbench/counter_la"
 .LASF0:
 	.string	"counter_la.c"
+.LASF1:
+	.string	"/mnt/hgfs/shared_folder/SOC_Final_UART_FIFO/SoCLab-ExtraLab/testbench/counter_la"
 	.ident	"GCC: (g1ea978e3066) 12.1.0"

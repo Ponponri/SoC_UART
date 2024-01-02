@@ -1,5 +1,5 @@
 # 0 "uart.c"
-# 1 "/home/ponponri/Desktop/shared_folder/SoCLab-ExtraLab_1226_uart/SoCLab-ExtraLab/testbench/counter_la//"
+# 1 "/mnt/hgfs/shared_folder/SOC_Final_UART_FIFO/SoCLab-ExtraLab/testbench/counter_la//"
 # 0 "<built-in>"
 # 0 "<command-line>"
 # 1 "uart.c"
@@ -1673,12 +1673,10 @@ char __attribute__ ( ( section ( ".mprj" ) ) ) uart_read_char()
 int __attribute__ ( ( section ( ".mprj" ) ) ) uart_read()
 {
     int num;
-    if(((((*(volatile uint32_t*)0x30000008)>>5) | 0) == 0) && ((((*(volatile uint32_t*)0x30000008)>>4) | 0) == 0)){
-        for(int i = 0; i < 1; i++)
-            asm volatile ("nop");
-
-        num = (*(volatile uint32_t*)0x30000000);
-    }
+# 53 "uart.c"
+    for(int i = 0; i < 1; i++)
+        asm volatile ("nop");
+    num = (*(volatile uint32_t*)0x30000000);
 
     return num;
 }

@@ -21,7 +21,7 @@ Linker script and memory map
 
                 0x0000000000000000                __DYNAMIC = 0x0
 
-.text           0x0000000010000000      0x3d8
+.text           0x0000000010000000      0x448
                 0x0000000010000000                _ftext = .
  *crt0*(.text)
  .text          0x0000000010000000      0x178 counter_la.elf-crt0_vex.o
@@ -34,35 +34,35 @@ Linker script and memory map
                 0x0000000010000178                isr
  .text          0x00000000100001b8        0x0 counter_la.elf-matmul.o
  .text          0x00000000100001b8        0x0 counter_la.elf-uart.o
- .text          0x00000000100001b8      0x1fc counter_la.elf-counter_la.o
+ .text          0x00000000100001b8      0x26c counter_la.elf-counter_la.o
                 0x00000000100001b8                putchar
                 0x0000000010000204                print
                 0x000000001000023c                main
- .text          0x00000000100003b4       0x24 /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
-                0x00000000100003b4                __mulsi3
-                0x00000000100003d8                _etext = .
+ .text          0x0000000010000424       0x24 /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
+                0x0000000010000424                __mulsi3
+                0x0000000010000448                _etext = .
 
-.mprj           0x00000000100003d8      0x108
- .mprj          0x00000000100003d8      0x108 counter_la.elf-uart.o
-                0x00000000100003d8                uart_write
-                0x00000000100003f4                uart_write_char
-                0x0000000010000440                uart_write_string
-                0x0000000010000478                uart_read_char
-                0x00000000100004b0                uart_read
+.mprj           0x0000000010000448       0xe8
+ .mprj          0x0000000010000448       0xe8 counter_la.elf-uart.o
+                0x0000000010000448                uart_write
+                0x0000000010000464                uart_write_char
+                0x00000000100004b0                uart_write_string
+                0x00000000100004e8                uart_read_char
+                0x0000000010000520                uart_read
 
-.rela.dyn       0x00000000100004e0        0x0
- .rela.text     0x00000000100004e0        0x0 counter_la.elf-crt0_vex.o
+.rela.dyn       0x0000000010000530        0x0
+ .rela.text     0x0000000010000530        0x0 counter_la.elf-crt0_vex.o
 
-.rodata         0x00000000100004e0        0x0
-                0x00000000100004e0                . = ALIGN (0x8)
- *fill*         0x00000000100004e0        0x0 
-                0x00000000100004e0                _frodata = .
+.rodata         0x0000000010000530        0x0
+                0x0000000010000530                . = ALIGN (0x8)
+ *fill*         0x0000000010000530        0x0 
+                0x0000000010000530                _frodata = .
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  *(.rodata1)
-                0x00000000100004e0                . = ALIGN (0x8)
-                0x00000000100004e0                _erodata = .
+                0x0000000010000530                . = ALIGN (0x8)
+                0x0000000010000530                _erodata = .
 
-.data           0x0000000000000000        0x8 load address 0x00000000100004e0
+.data           0x0000000000000000        0x8 load address 0x0000000010000530
                 0x0000000000000000                . = ALIGN (0x8)
                 0x0000000000000000                _fdata = .
  *(.data .data.* .gnu.linkonce.d.*)
@@ -82,7 +82,7 @@ Linker script and memory map
                 0x0000000000000008                . = ALIGN (0x8)
                 0x0000000000000008                _edata = .
 
-.bss            0x0000000000000008       0x48 load address 0x00000000100004e8
+.bss            0x0000000000000008       0x48 load address 0x0000000010000538
                 0x0000000000000008                . = ALIGN (0x8)
                 0x0000000000000008                _fbss = .
  *(.dynsbss)
@@ -105,25 +105,25 @@ Linker script and memory map
                 0x0000000000000050                _ebss = .
                 0x0000000000000050                _end = .
 
-.mprjram        0x0000000038000000       0xfc load address 0x00000000100004e8
+.mprjram        0x0000000038000000       0xfc load address 0x0000000010000538
                 0x0000000038000000                . = ALIGN (0x8)
                 0x0000000038000000                _fsram = .
  .mprjram       0x0000000038000000       0xfc counter_la.elf-matmul.o
                 0x0000000038000000                matmul
 
-.adder          0x0000000038000200       0x80 load address 0x00000000100005e4
+.adder          0x0000000038000200       0x80 load address 0x0000000010000634
                 0x0000000038000200                . = ALIGN (0x8)
                 0x0000000038000200                _fadderram = .
  .adder         0x0000000038000200       0x80 counter_la.elf-matmul.o
                 0x0000000038000200                A
                 0x0000000038000240                B
                 0x0000000000000600                PROVIDE (_fstack = (ORIGIN (dff2) + LENGTH (dff2)))
-                0x00000000100004e0                PROVIDE (_fdata_rom = LOADADDR (.data))
+                0x0000000010000530                PROVIDE (_fdata_rom = LOADADDR (.data))
                 [!provide]                        PROVIDE (_edata_rom = (LOADADDR (.data) + SIZEOF (.data)))
                 0x00000000380000fc                PROVIDE (_esram = (ORIGIN (mprjram) + SIZEOF (.mprjram)))
-                0x00000000100004e8                PROVIDE (_esram_rom = LOADADDR (.mprjram))
+                0x0000000010000538                PROVIDE (_esram_rom = LOADADDR (.mprjram))
                 0x0000000038000280                PROVIDE (_eadderram = (ORIGIN (adder) + SIZEOF (.adder)))
-                0x00000000100005e4                PROVIDE (_eadderram_rom = LOADADDR (.adder))
+                0x0000000010000634                PROVIDE (_eadderram_rom = LOADADDR (.adder))
 LOAD counter_la.elf-crt0_vex.o
 LOAD counter_la.elf-isr.o
 LOAD counter_la.elf-matmul.o
@@ -154,48 +154,48 @@ OUTPUT(counter_la.elf elf32-littleriscv)
  .comment       0x000000000000001b       0x1c counter_la.elf-uart.o
  .comment       0x000000000000001b       0x1c counter_la.elf-counter_la.o
 
-.debug_line     0x0000000000000000      0xd7f
+.debug_line     0x0000000000000000      0xe31
  .debug_line    0x0000000000000000      0x240 counter_la.elf-crt0_vex.o
  .debug_line    0x0000000000000240      0x11b counter_la.elf-isr.o
  .debug_line    0x000000000000035b      0x171 counter_la.elf-matmul.o
- .debug_line    0x00000000000004cc      0x2a2 counter_la.elf-uart.o
- .debug_line    0x000000000000076e      0x597 counter_la.elf-counter_la.o
- .debug_line    0x0000000000000d05       0x7a /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
+ .debug_line    0x00000000000004cc      0x260 counter_la.elf-uart.o
+ .debug_line    0x000000000000072c      0x68b counter_la.elf-counter_la.o
+ .debug_line    0x0000000000000db7       0x7a /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
 
 .debug_line_str
-                0x0000000000000000      0x1d1
+                0x0000000000000000      0x1be
  .debug_line_str
-                0x0000000000000000       0x7e counter_la.elf-crt0_vex.o
+                0x0000000000000000       0x6b counter_la.elf-crt0_vex.o
  .debug_line_str
-                0x000000000000007e       0x83 counter_la.elf-isr.o
-                                        0x166 (size before relaxing)
+                0x000000000000006b       0x83 counter_la.elf-isr.o
+                                        0x140 (size before relaxing)
  .debug_line_str
-                0x0000000000000101       0x21 counter_la.elf-matmul.o
+                0x00000000000000ee       0x21 counter_la.elf-matmul.o
+                                        0x127 (size before relaxing)
+ .debug_line_str
+                0x000000000000010f        0x7 counter_la.elf-uart.o
+                                         0xfa (size before relaxing)
+ .debug_line_str
+                0x0000000000000116       0x14 counter_la.elf-counter_la.o
                                         0x14d (size before relaxing)
  .debug_line_str
-                0x0000000000000122        0x7 counter_la.elf-uart.o
-                                        0x120 (size before relaxing)
- .debug_line_str
-                0x0000000000000129       0x14 counter_la.elf-counter_la.o
-                                        0x173 (size before relaxing)
- .debug_line_str
-                0x000000000000013d       0x94 /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
+                0x000000000000012a       0x94 /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
 
-.debug_info     0x0000000000000000      0x71d
+.debug_info     0x0000000000000000      0x733
  .debug_info    0x0000000000000000       0x25 counter_la.elf-crt0_vex.o
  .debug_info    0x0000000000000025      0x1cd counter_la.elf-isr.o
  .debug_info    0x00000000000001f2      0x15e counter_la.elf-matmul.o
- .debug_info    0x0000000000000350      0x180 counter_la.elf-uart.o
- .debug_info    0x00000000000004d0      0x21e counter_la.elf-counter_la.o
- .debug_info    0x00000000000006ee       0x2f /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
+ .debug_info    0x0000000000000350      0x182 counter_la.elf-uart.o
+ .debug_info    0x00000000000004d2      0x232 counter_la.elf-counter_la.o
+ .debug_info    0x0000000000000704       0x2f /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
 
-.debug_abbrev   0x0000000000000000      0x51d
+.debug_abbrev   0x0000000000000000      0x51c
  .debug_abbrev  0x0000000000000000       0x14 counter_la.elf-crt0_vex.o
  .debug_abbrev  0x0000000000000014      0x150 counter_la.elf-isr.o
  .debug_abbrev  0x0000000000000164       0xe9 counter_la.elf-matmul.o
- .debug_abbrev  0x000000000000024d      0x107 counter_la.elf-uart.o
- .debug_abbrev  0x0000000000000354      0x1a8 counter_la.elf-counter_la.o
- .debug_abbrev  0x00000000000004fc       0x21 /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
+ .debug_abbrev  0x000000000000024d      0x106 counter_la.elf-uart.o
+ .debug_abbrev  0x0000000000000353      0x1a8 counter_la.elf-counter_la.o
+ .debug_abbrev  0x00000000000004fb       0x21 /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
 
 .debug_aranges  0x0000000000000000       0xe0
  .debug_aranges
@@ -211,21 +211,21 @@ OUTPUT(counter_la.elf elf32-littleriscv)
  .debug_aranges
                 0x00000000000000c0       0x20 /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
 
-.debug_str      0x0000000000000000      0x2d2
- .debug_str     0x0000000000000000       0x8a counter_la.elf-crt0_vex.o
- .debug_str     0x000000000000008a      0x11b counter_la.elf-isr.o
+.debug_str      0x0000000000000000      0x2bf
+ .debug_str     0x0000000000000000       0x77 counter_la.elf-crt0_vex.o
+ .debug_str     0x0000000000000077      0x11b counter_la.elf-isr.o
                                         0x15c (size before relaxing)
- .debug_str     0x00000000000001a5       0x2e counter_la.elf-matmul.o
+ .debug_str     0x0000000000000192       0x2e counter_la.elf-matmul.o
                                         0x116 (size before relaxing)
- .debug_str     0x00000000000001d3       0x31 counter_la.elf-uart.o
+ .debug_str     0x00000000000001c0       0x31 counter_la.elf-uart.o
                                         0x133 (size before relaxing)
- .debug_str     0x0000000000000204       0x3a counter_la.elf-counter_la.o
+ .debug_str     0x00000000000001f1       0x3a counter_la.elf-counter_la.o
                                         0x150 (size before relaxing)
- .debug_str     0x000000000000023e       0x94 /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
+ .debug_str     0x000000000000022b       0x94 /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
                                          0xa9 (size before relaxing)
 
 .debug_loclists
-                0x0000000000000000      0x1e6
+                0x0000000000000000      0x208
  .debug_loclists
                 0x0000000000000000       0x52 counter_la.elf-isr.o
  .debug_loclists
@@ -233,7 +233,7 @@ OUTPUT(counter_la.elf elf32-littleriscv)
  .debug_loclists
                 0x00000000000000b4       0x88 counter_la.elf-uart.o
  .debug_loclists
-                0x000000000000013c       0xaa counter_la.elf-counter_la.o
+                0x000000000000013c       0xcc counter_la.elf-counter_la.o
 
 .debug_frame    0x0000000000000000      0x188
  .debug_frame   0x0000000000000000       0x2c counter_la.elf-isr.o

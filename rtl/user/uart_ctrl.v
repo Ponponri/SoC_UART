@@ -16,7 +16,8 @@ module ctrl(
     output reg [7:0]  o_tx,
     input wire        i_tx_start_clear,
     input wire        i_tx_busy,
-    output reg        o_tx_start
+    output reg        o_tx_start,
+    output reg [31:0] stat_reg
 );
 
 // Declare the UART memory mapped registers address
@@ -39,7 +40,7 @@ localparam STAT_REG = 32'h3000_0008;
 
 reg [31:0] rx_buffer;
 reg [31:0] tx_buffer;
-reg [31:0] stat_reg;    
+// reg [31:0] stat_reg;    
 reg tx_start_local;
 
 always@(posedge clk or negedge rst_n)begin

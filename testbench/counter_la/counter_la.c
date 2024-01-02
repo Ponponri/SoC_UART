@@ -193,8 +193,19 @@ void main()
 	reg_mprj_datal = *(tmp+2) << 16;
 	reg_mprj_datal = *(tmp+3) << 16;	
 
-	// reg_mprj_datal = *(tmp+9) << 16;
-	// firPtr();
+	tmp = matmul();
+	reg_mprj_datal = *tmp << 16;
+	reg_mprj_datal = *(tmp+1) << 16;
+	reg_mprj_datal = *(tmp+2) << 16;
+	reg_mprj_datal = *(tmp+3) << 16;
+
+	tmp = matmul();
+	reg_mprj_datal = *tmp << 16;
+	reg_mprj_datal = *(tmp+1) << 16;
+	reg_mprj_datal = *(tmp+2) << 16;
+	reg_mprj_datal = *(tmp+3) << 16;
+	
 	reg_mprj_datal = 0xAB610000;
+	// while(1);
 }
 
