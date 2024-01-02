@@ -6,7 +6,7 @@
 	.text
 .Ltext0:
 	.cfi_sections	.debug_frame
-	.file 0 "/home/ponponri/Desktop/shared_folder/SoCLab-ExtraLab_1226_uart/SoCLab-ExtraLab/testbench/counter_la" "uart.c"
+	.file 0 "/mnt/hgfs/shared_folder/SOC_Final_UART_FIFO/SoCLab-ExtraLab/testbench/counter_la" "uart.c"
 	.section	.mprj,"ax",@progbits
 	.align	2
 	.globl	uart_write
@@ -193,41 +193,28 @@ uart_read:
 	.loc 1 43 1 is_stmt 1
 	.cfi_startproc
 	.loc 1 44 5
-	.loc 1 45 5
-	.loc 1 45 12 is_stmt 0
-	li	a5,805306368
-	lw	a5,8(a5)
-	.loc 1 45 44
-	srli	a5,a5,5
-	.loc 1 45 7
-	bne	a5,zero,.L18
-	.loc 1 45 67 discriminator 1
-	li	a5,805306368
-	lw	a5,8(a5)
-	.loc 1 45 99 discriminator 1
-	srli	a5,a5,4
-	.loc 1 45 60 discriminator 1
-	bne	a5,zero,.L18
-.LVL14:
+	.loc 1 53 5
 .LBB3:
-	.loc 1 47 13 is_stmt 1 discriminator 3
+	.loc 1 53 9
+.LVL14:
+	.loc 1 53 22
+	.loc 1 54 9
  #APP
-# 47 "uart.c" 1
+# 54 "uart.c" 1
 	nop
 # 0 "" 2
-	.loc 1 46 32 discriminator 3
+	.loc 1 53 28
 .LVL15:
-	.loc 1 46 26 discriminator 3
+	.loc 1 53 22
  #NO_APP
 .LBE3:
-	.loc 1 49 9 discriminator 3
-	.loc 1 49 16 is_stmt 0 discriminator 3
+	.loc 1 55 5
+	.loc 1 55 12 is_stmt 0
 	li	a5,805306368
 	lw	a0,0(a5)
 .LVL16:
-.L18:
-	.loc 1 52 5 is_stmt 1
-	.loc 1 53 1 is_stmt 0
+	.loc 1 57 5 is_stmt 1
+	.loc 1 58 1 is_stmt 0
 	ret
 	.cfi_endproc
 .LFE325:
@@ -237,7 +224,7 @@ uart_read:
 	.file 2 "/opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/include/stdint-gcc.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x17c
+	.4byte	0x17e
 	.2byte	0x5
 	.byte	0x1
 	.byte	0x4
@@ -305,7 +292,7 @@ uart_read:
 	.4byte	.LFE325-.LFB325
 	.byte	0x1
 	.byte	0x9c
-	.4byte	0xb5
+	.4byte	0xb6
 	.byte	0x3
 	.string	"num"
 	.byte	0x2c
@@ -318,7 +305,8 @@ uart_read:
 	.4byte	.LBE3-.LBB3
 	.byte	0x5
 	.string	"i"
-	.byte	0x2e
+	.byte	0x35
+	.byte	0xd
 	.4byte	0x6a
 	.4byte	.LLST3
 	.byte	0
@@ -327,17 +315,17 @@ uart_read:
 	.4byte	.LASF12
 	.byte	0x1d
 	.byte	0x30
-	.4byte	0xf2
+	.4byte	0xf4
 	.4byte	.LFB324
 	.4byte	.LFE324-.LFB324
 	.byte	0x1
 	.byte	0x9c
-	.4byte	0xf2
+	.4byte	0xf4
 	.byte	0x3
 	.string	"num"
 	.byte	0x1f
 	.byte	0x7
-	.4byte	0xf2
+	.4byte	0xf4
 	.byte	0x1
 	.byte	0x5a
 	.byte	0x4
@@ -346,6 +334,7 @@ uart_read:
 	.byte	0x5
 	.string	"i"
 	.byte	0x21
+	.byte	0x11
 	.4byte	0x6a
 	.4byte	.LLST2
 	.byte	0
@@ -355,7 +344,7 @@ uart_read:
 	.byte	0x8
 	.4byte	.LASF13
 	.byte	0xb
-	.4byte	0xf2
+	.4byte	0xf4
 	.byte	0x6
 	.4byte	.LASF14
 	.byte	0x16
@@ -363,20 +352,20 @@ uart_read:
 	.4byte	.LFE323-.LFB323
 	.byte	0x1
 	.byte	0x9c
-	.4byte	0x129
+	.4byte	0x12b
 	.byte	0x7
 	.string	"s"
 	.byte	0x16
 	.byte	0x4e
-	.4byte	0x129
+	.4byte	0x12b
 	.4byte	.LLST1
 	.byte	0xc
 	.4byte	.LVL9
-	.4byte	0x12f
+	.4byte	0x131
 	.byte	0
 	.byte	0xd
 	.byte	0x4
-	.4byte	0xf9
+	.4byte	0xfb
 	.byte	0x6
 	.4byte	.LASF15
 	.byte	0xc
@@ -384,16 +373,16 @@ uart_read:
 	.4byte	.LFE322-.LFB322
 	.byte	0x1
 	.byte	0x9c
-	.4byte	0x160
+	.4byte	0x162
 	.byte	0x7
 	.string	"c"
 	.byte	0xc
 	.byte	0x45
-	.4byte	0xf2
+	.4byte	0xf4
 	.4byte	.LLST0
 	.byte	0xe
 	.4byte	.LVL5
-	.4byte	0x12f
+	.4byte	0x131
 	.byte	0xf
 	.byte	0x1
 	.byte	0x5a
@@ -499,8 +488,7 @@ uart_read:
 	.byte	0x3b
 	.byte	0xb
 	.byte	0x39
-	.byte	0x21
-	.byte	0x11
+	.byte	0xb
 	.byte	0x49
 	.byte	0x13
 	.byte	0x2
@@ -702,7 +690,7 @@ uart_read:
 	.byte	0x9f
 	.byte	0x7
 	.4byte	.LVL15
-	.4byte	.LVL16
+	.4byte	.LFE325
 	.byte	0x2
 	.byte	0x31
 	.byte	0x9f
@@ -846,8 +834,8 @@ uart_read:
 .LASF2:
 	.string	"signed char"
 	.section	.debug_line_str,"MS",@progbits,1
-.LASF1:
-	.string	"/home/ponponri/Desktop/shared_folder/SoCLab-ExtraLab_1226_uart/SoCLab-ExtraLab/testbench/counter_la"
 .LASF0:
 	.string	"uart.c"
+.LASF1:
+	.string	"/mnt/hgfs/shared_folder/SOC_Final_UART_FIFO/SoCLab-ExtraLab/testbench/counter_la"
 	.ident	"GCC: (g1ea978e3066) 12.1.0"

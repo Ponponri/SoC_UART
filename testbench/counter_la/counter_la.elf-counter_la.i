@@ -1,5 +1,5 @@
 # 0 "counter_la.c"
-# 1 "/home/ponponri/Desktop/shared_folder/SoCLab-ExtraLab_1226_uart/SoCLab-ExtraLab/testbench/counter_la//"
+# 1 "/mnt/hgfs/shared_folder/SOC_Final_UART_FIFO/SoCLab-ExtraLab/testbench/counter_la//"
 # 0 "<built-in>"
 # 0 "<command-line>"
 # 1 "counter_la.c"
@@ -1752,7 +1752,18 @@ void main()
  (*(volatile uint32_t*)0x2600000c) = *(tmp+2) << 16;
  (*(volatile uint32_t*)0x2600000c) = *(tmp+3) << 16;
 
+ tmp = matmul();
+ (*(volatile uint32_t*)0x2600000c) = *tmp << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+1) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+2) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+3) << 16;
 
+ tmp = matmul();
+ (*(volatile uint32_t*)0x2600000c) = *tmp << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+1) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+2) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+3) << 16;
 
  (*(volatile uint32_t*)0x2600000c) = 0xAB610000;
+
 }

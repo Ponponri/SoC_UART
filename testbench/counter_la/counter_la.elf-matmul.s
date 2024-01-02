@@ -6,7 +6,7 @@
 	.text
 .Ltext0:
 	.cfi_sections	.debug_frame
-	.file 0 "/home/ponponri/Desktop/shared_folder/SoCLab-ExtraLab_1226_uart/SoCLab-ExtraLab/testbench/counter_la" "../../firmware/matmul.c"
+	.file 0 "/mnt/hgfs/shared_folder/SOC_Final_UART_FIFO/SoCLab-ExtraLab/testbench/counter_la" "../../firmware/matmul.c"
 	.globl	__mulsi3
 	.section	.mprjram,"ax",@progbits
 	.align	2
@@ -744,8 +744,8 @@ mat_addr:
 .LASF2:
 	.string	"signed char"
 	.section	.debug_line_str,"MS",@progbits,1
-.LASF1:
-	.string	"/home/ponponri/Desktop/shared_folder/SoCLab-ExtraLab_1226_uart/SoCLab-ExtraLab/testbench/counter_la"
 .LASF0:
 	.string	"../../firmware/matmul.c"
+.LASF1:
+	.string	"/mnt/hgfs/shared_folder/SOC_Final_UART_FIFO/SoCLab-ExtraLab/testbench/counter_la"
 	.ident	"GCC: (g1ea978e3066) 12.1.0"

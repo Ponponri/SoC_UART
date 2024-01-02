@@ -1,148 +1,192 @@
 [*]
 [*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
-[*] Tue Sep 19 07:26:27 2023
+[*] Tue Jan  2 10:02:43 2024
 [*]
-[dumpfile] "/mnt/hgfs/shared_folder/SoCLab-ExtraLab/testbench/counter_la/counter_la.vcd"
-[dumpfile_mtime] "Tue Sep 19 06:48:34 2023"
-[dumpfile_size] 24538902
-[savefile] "/mnt/hgfs/shared_folder/SoCLab-ExtraLab/testbench/counter_la/waveform.gtkw"
+[dumpfile] "/mnt/hgfs/shared_folder/SOC_Final_UART_FIFO/SoCLab-ExtraLab/testbench/counter_la/counter_la.vcd"
+[dumpfile_mtime] "Tue Jan  2 10:02:39 2024"
+[dumpfile_size] 146870272
+[savefile] "/mnt/hgfs/shared_folder/SOC_Final_UART_FIFO/SoCLab-ExtraLab/testbench/counter_la/waveform.gtkw"
 [timestart] 0
-[size] 1075 907
-[pos] 1923 970
-*-28.769600 97200000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[size] 2472 1376
+[pos] 532 657
+*-29.317348 2509412500 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] counter_la_tb.
 [treeopen] counter_la_tb.uut.
 [treeopen] counter_la_tb.uut.mprj.
 [treeopen] counter_la_tb.uut.mprj.mprj.
-[sst_width] 214
-[signals_width] 262
+[treeopen] counter_la_tb.uut.mprj.uart.
+[sst_width] 233
+[signals_width] 406
 [sst_expanded] 1
-[sst_vpaned_height] 526
--mprj
-@28
-counter_la_tb.uut.mprj.mprj.clk
-counter_la_tb.uut.mprj.mprj.decoded
-@22
-counter_la_tb.uut.mprj.mprj.delayed_count[15:0]
-counter_la_tb.uut.mprj.mprj.rdata[31:0]
-@28
-counter_la_tb.uut.mprj.mprj.ready
-counter_la_tb.uut.mprj.mprj.valid
-counter_la_tb.uut.mprj.mprj.wbs_ack_o
-counter_la_tb.uut.mprj.mprj.wbs_we_i
-counter_la_tb.uut.mprj.mprj.wbs_cyc_i
-counter_la_tb.uut.mprj.mprj.wbs_stb_i
-@22
-counter_la_tb.uut.mprj.mprj.wbs_adr_i[31:0]
-counter_la_tb.uut.mprj.mprj.wbs_dat_i[31:0]
-counter_la_tb.uut.mprj.mprj.wbs_dat_o[31:0]
+[sst_vpaned_height] 869
 @200
 -
--acc
-@22
-counter_la_tb.uut.mprj.DMA_inst.acc_data_i[31:0]
-counter_la_tb.uut.mprj.DMA_inst.acc_data_valid_i
--dma-signal
-@22
-counter_la_tb.uut.mprj.mprj.dma_wbs_cyc_i
-counter_la_tb.uut.mprj.mprj.dma_wbs_we_i
-counter_la_tb.uut.mprj.mprj.dma_wbs_stb_i
-counter_la_tb.uut.mprj.mprj.dma_wbs_adr_i[31:0]
-counter_la_tb.uut.mprj.mprj.dma_brust_valid
--
--user_sdram_controller
-@22
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.Mapped_BA[1:0]
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.Mapped_CA[7:0]
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.Mapped_RA[12:0]
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.sample
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.pref_buf_0[31:0]
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.pref_buf_1[31:0]
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.pref_buf_2[31:0]
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.pref_buf_3[31:0]
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.clk
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.addr_q[22:0]
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.offset[22:0]
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.prefetch_flag
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.prefetch_timer[1:0]
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.prefetch_length[1:0]
-- brust-related
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.state_q[4:0]
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.brust_en
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.brust_valid
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.brust_flag
-counter_la_tb.uut.mprj.mprj.user_sdram_controller.brust_timer[1:0]
--
--User Bram
+-rx
 @28
-counter_la_tb.uut.mprj.mprj.user_bram.Clk
+counter_la_tb.uut.mprj.uart.receive.busy
 @22
-counter_la_tb.uut.mprj.mprj.user_bram.Error
+counter_la_tb.uut.mprj.uart.receive.clk_cnt[31:0]
+counter_la_tb.uut.mprj.uart.receive.clk_div[31:0]
+@28
+counter_la_tb.uut.mprj.uart.receive.frame_err
+counter_la_tb.uut.mprj.uart.receive.irq
+counter_la_tb.uut.mprj.uart.receive.rx
+@22
+counter_la_tb.uut.mprj.uart.receive.rx_data[7:0]
+@28
+counter_la_tb.uut.mprj.uart.receive.rx_finish
+counter_la_tb.uut.mprj.uart.receive.rx_index[2:0]
+@22
+counter_la_tb.uut.mprj.uart.receive.state[3:0]
 @200
--User Bram Bank0
+-rx_fifo
 @28
-counter_la_tb.uut.mprj.mprj.user_bram.Bank0.clk
+counter_la_tb.uut.mprj.uart.rx_fifo.cnt[1:0]
 @22
-counter_la_tb.uut.mprj.mprj.user_bram.Bank0.d[31:0]
-counter_la_tb.uut.mprj.mprj.user_bram.Bank0.q[31:0]
-@22
-counter_la_tb.uut.mprj.mprj.user_bram.Bank0.raddr[9:0]
+counter_la_tb.uut.mprj.uart.rx_fifo.data_i[7:0]
+counter_la_tb.uut.mprj.uart.rx_fifo.data_o[7:0]
+counter_la_tb.uut.mprj.uart.rx_fifo.end_ptr[3:0]
 @28
-counter_la_tb.uut.mprj.mprj.user_bram.Bank0.re
-#@22
-#counter_la_tb.uut.mprj.mprj.user_bram.Bank0.waddr[9:0]
-#@28
-#counter_la_tb.uut.mprj.mprj.user_bram.Bank0.we
+counter_la_tb.uut.mprj.uart.rx_fifo.isEmpty
+counter_la_tb.uut.mprj.uart.rx_fifo.isFull
+counter_la_tb.uut.mprj.uart.rx_fifo.pop
+counter_la_tb.uut.mprj.uart.rx_fifo.push
+@22
+counter_la_tb.uut.mprj.uart.rx_fifo.start_ptr[3:0]
 @200
 -
--User Bram Bank1
+-tx
 @28
-counter_la_tb.uut.mprj.mprj.user_bram.Bank1.clk
+counter_la_tb.uut.mprj.uart.transmission.busy
+counter_la_tb.uut.mprj.uart.transmission.clear_req
 @22
-counter_la_tb.uut.mprj.mprj.user_bram.Bank1.d[31:0]
-counter_la_tb.uut.mprj.mprj.user_bram.Bank1.q[31:0]
-@22
-counter_la_tb.uut.mprj.mprj.user_bram.Bank1.raddr[9:0]
+counter_la_tb.uut.mprj.uart.transmission.clk_cnt[31:0]
+counter_la_tb.uut.mprj.uart.transmission.clk_div[31:0]
 @28
-counter_la_tb.uut.mprj.mprj.user_bram.Bank1.re
-#@22
-#counter_la_tb.uut.mprj.mprj.user_bram.Bank1.waddr[9:0]
-#@28
-#counter_la_tb.uut.mprj.mprj.user_bram.Bank1.we
+counter_la_tb.uut.mprj.uart.transmission.detect_posedge_start[1:0]
+@22
+counter_la_tb.uut.mprj.uart.transmission.state[3:0]
+@28
+counter_la_tb.uut.mprj.uart.transmission.tx
+@22
+counter_la_tb.uut.mprj.uart.transmission.tx_data[7:0]
+@28
+counter_la_tb.uut.mprj.uart.transmission.tx_index[2:0]
+counter_la_tb.uut.mprj.uart.transmission.tx_start
+@200
+-tx_fifo
+@28
+counter_la_tb.uut.mprj.uart.tx_fifo.cnt[1:0]
+@22
+counter_la_tb.uut.mprj.uart.tx_fifo.data_i[7:0]
+counter_la_tb.uut.mprj.uart.tx_fifo.data_o[7:0]
+counter_la_tb.uut.mprj.uart.tx_fifo.end_ptr[3:0]
+@28
+counter_la_tb.uut.mprj.uart.tx_fifo.isEmpty
+counter_la_tb.uut.mprj.uart.tx_fifo.isFull
+counter_la_tb.uut.mprj.uart.tx_fifo.pop
+counter_la_tb.uut.mprj.uart.tx_fifo.push
+@22
+counter_la_tb.uut.mprj.uart.tx_fifo.start_ptr[3:0]
 @200
 -
--User Bram Bank2
+-ctrl
 @28
-counter_la_tb.uut.mprj.mprj.user_bram.Bank2.clk
+counter_la_tb.uut.mprj.uart.ctrl.clk
+counter_la_tb.uut.mprj.uart.ctrl.i_frame_err
+counter_la_tb.uut.mprj.uart.ctrl.i_irq
 @22
-counter_la_tb.uut.mprj.mprj.user_bram.Bank2.d[31:0]
-counter_la_tb.uut.mprj.mprj.user_bram.Bank2.q[31:0]
-@22
-counter_la_tb.uut.mprj.mprj.user_bram.Bank2.raddr[9:0]
+counter_la_tb.uut.mprj.uart.ctrl.i_rx[7:0]
 @28
-counter_la_tb.uut.mprj.mprj.user_bram.Bank2.re
-#@22
-#counter_la_tb.uut.mprj.mprj.user_bram.Bank2.waddr[9:0]
-#@28
-#counter_la_tb.uut.mprj.mprj.user_bram.Bank2.we
+counter_la_tb.uut.mprj.uart.ctrl.i_rx_busy
+counter_la_tb.uut.mprj.uart.ctrl.i_tx_busy
+counter_la_tb.uut.mprj.uart.ctrl.i_tx_start_clear
+@22
+counter_la_tb.uut.mprj.uart.ctrl.i_wb_adr[31:0]
+counter_la_tb.uut.mprj.uart.ctrl.i_wb_dat[31:0]
+counter_la_tb.uut.mprj.uart.ctrl.i_wb_sel[3:0]
+@28
+counter_la_tb.uut.mprj.uart.ctrl.i_wb_valid
+counter_la_tb.uut.mprj.uart.ctrl.i_wb_we
+counter_la_tb.uut.mprj.uart.ctrl.o_rx_finish
+@22
+counter_la_tb.uut.mprj.uart.ctrl.o_tx[7:0]
+@28
+counter_la_tb.uut.mprj.uart.ctrl.o_tx_start
+counter_la_tb.uut.mprj.uart.ctrl.o_wb_ack
+@22
+counter_la_tb.uut.mprj.uart.ctrl.o_wb_dat[31:0]
+@28
+counter_la_tb.uut.mprj.uart.ctrl.rst_n
+@22
+counter_la_tb.uut.mprj.uart.ctrl.rx_buffer[31:0]
+counter_la_tb.uut.mprj.uart.ctrl.tx_buffer[31:0]
+@28
+counter_la_tb.uut.mprj.uart.ctrl.tx_start_local
+@22
+counter_la_tb.uut.mprj.uart.ctrl.stat_reg[31:0]
 @200
 -
--User Bram Bank3
-@28
-counter_la_tb.uut.mprj.mprj.user_bram.Bank3.clk
+-uart
 @22
-counter_la_tb.uut.mprj.mprj.user_bram.Bank3.d[31:0]
-counter_la_tb.uut.mprj.mprj.user_bram.Bank3.q[31:0]
-@22
-counter_la_tb.uut.mprj.mprj.user_bram.Bank3.raddr[9:0]
+counter_la_tb.uut.mprj.uart.clk_div[31:0]
+counter_la_tb.uut.mprj.uart.crtl_stat[31:0]
 @28
-counter_la_tb.uut.mprj.mprj.user_bram.Bank3.re
-#@22
-#counter_la_tb.uut.mprj.mprj.user_bram.Bank3.waddr[9:0]
-#@28
-#counter_la_tb.uut.mprj.mprj.user_bram.Bank3.we
-@200
--
--
+counter_la_tb.uut.mprj.uart.frame_err
+@22
+counter_la_tb.uut.mprj.uart.io_in[37:0]
+counter_la_tb.uut.mprj.uart.io_oeb[37:0]
+counter_la_tb.uut.mprj.uart.io_out[37:0]
+@28
+counter_la_tb.uut.mprj.uart.irq
+counter_la_tb.uut.mprj.uart.rx_fifo_irq
+counter_la_tb.uut.mprj.uart.irq_cnt[1:0]
+counter_la_tb.uut.mprj.uart.irq_valid
+counter_la_tb.uut.mprj.uart.rx
+counter_la_tb.uut.mprj.uart.rx_busy
+counter_la_tb.uut.mprj.uart.rx_cnt[1:0]
+@22
+counter_la_tb.uut.mprj.uart.rx_data[7:0]
+counter_la_tb.uut.mprj.uart.rx_data_fifo[7:0]
+@28
+counter_la_tb.uut.mprj.uart.rx_finish
+counter_la_tb.uut.mprj.uart.rx_isEmpty
+counter_la_tb.uut.mprj.uart.rx_isFull
+counter_la_tb.uut.mprj.uart.tx
+counter_la_tb.uut.mprj.uart.tx_busy
+counter_la_tb.uut.mprj.uart.tx_cnt[1:0]
+@22
+counter_la_tb.uut.mprj.uart.tx_data[7:0]
+counter_la_tb.uut.mprj.uart.tx_data_fifo[7:0]
+@28
+counter_la_tb.uut.mprj.uart.tx_finish
+counter_la_tb.uut.mprj.uart.tx_flag[1:0]
+counter_la_tb.uut.mprj.uart.tx_isEmpty
+counter_la_tb.uut.mprj.uart.tx_isFull
+counter_la_tb.uut.mprj.uart.tx_push
+counter_la_tb.uut.mprj.uart.tx_start
+counter_la_tb.uut.mprj.uart.tx_start_clear
+counter_la_tb.uut.mprj.uart.tx_start_fifo
+counter_la_tb.uut.mprj.uart.user_irq[2:0]
+counter_la_tb.uut.mprj.uart.wb_clk_i
+counter_la_tb.uut.mprj.uart.wb_rst_i
+counter_la_tb.uut.mprj.uart.wb_valid
+counter_la_tb.uut.mprj.uart.wbs_ack_o
+@23
+counter_la_tb.uut.mprj.uart.wbs_adr_i[31:0]
+@28
+counter_la_tb.uut.mprj.uart.wbs_cyc_i
+@22
+counter_la_tb.uut.mprj.uart.wbs_dat_i[31:0]
+counter_la_tb.uut.mprj.uart.wbs_dat_o[31:0]
+counter_la_tb.uut.mprj.uart.wbs_sel_i[3:0]
+@28
+counter_la_tb.uut.mprj.uart.wbs_stb_i
+counter_la_tb.uut.mprj.uart.wbs_we_i
 [pattern_trace] 1
 [pattern_trace] 0
+!010000@@
+?"F0006810
+@23
+counter_la_tb.uut.mprj.uart.wbs_adr_i[31:0]
+!!
