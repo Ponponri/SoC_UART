@@ -287,7 +287,7 @@ module fifo_uart(
 );
 
 reg [7:0]mem[3:0];
-reg [3:0]start_ptr,end_ptr;
+reg [1:0]start_ptr,end_ptr;
 
 always @(*) begin
     if(start_ptr == end_ptr) begin
