@@ -1,18 +1,19 @@
-# SDRAM Controller and SDRAM in Caravel User Project
-## Run User Project Memory Enabled counter_la Testbench
-Run iverilog simulation
+# Caravel SoC UART
+
+## Target
+- In the original design, the UART in Caravel SoC could not RX/TX concurrently. 
+- We need to add FIFO and communicate with CPU through wishbone (WB) protocol to solve this issue.
+
+## Solution
+![](./img/UART_1.jpg)
+![](./img/UART_2.jpg)
+![](./img/UART_3.jpg)
+![](./img/UART_4.jpg)
+![](./img/UART_5.jpg)
+![](./img/UART_6.jpg)
+## Run iverilog simulation
 ```sh
-cd ~/caravel-soc_fpga-lab/lab-sdram/testbench/counter_la
+cd ~/SoC_UART/testbench/counter_la
 source run_sim
 ```
 
-Validate the `Call function adder() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x2233` is printed
-```
-Reading counter_la.hex
-counter_la.hex loaded into memory
-Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
-VCD info: dumpfile counter_la.vcd opened for output.
-LA Test 1 started
-Call function adder() in User Project BRAM (mprjram, 0x38000000) return value passed, 0x2233
-LA Test 2 passed
-```
